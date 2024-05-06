@@ -1,0 +1,62 @@
+﻿<Window x:Class="Appl1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Appl1"
+        mc:Ignorable="d"
+        Title="Stack_Queue" Height="450" Width="800" Background="OldLace" >
+    <Grid Margin="-10,58,0,220">
+
+        <Menu Height="75" VerticalAlignment="Top" Margin="10,19,0,0">
+            <MenuItem Header="Stack" Height="75" Width="262" FontSize="20" FontWeight="Bold"  Background="Bisque" >
+                <MenuItem Header="Add"  Click="AddToStack" Background="Bisque" />
+                <MenuItem Header="Delete" Click="DeleteFromStack" Background="Bisque"/>
+
+                <DataGrid x:Name="stack_list" Loaded="Stack_Loaded" AutoGenerateColumns="False" FontSize="16" Height="250">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn CanUserSort="True" Binding="{Binding Path = Text }" Header="stack" IsReadOnly="True"  Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </MenuItem>
+
+            <MenuItem Header="Queue" Height="75" Width="262" FontSize="20" FontWeight="Bold" Background="BurlyWood" >
+                <MenuItem Header="Add" Click="AddToQueue" Background="BurlyWood" />
+                <MenuItem Header="Delete"  Click="DeleteFromQueue" Background="BurlyWood"/>
+                <DataGrid x:Name="queue_list" Loaded="Queue_Loaded" AutoGenerateColumns="False" FontSize="16" Height="250">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn CanUserSort="True" Binding="{Binding Path = Text }" IsReadOnly="True" Header="queue" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </MenuItem>
+
+            <MenuItem Header="Search" Height="75"  Width="260" FontSize="20" FontWeight="Bold" Background="Peru" >
+
+
+                <MenuItem Header="Search"   Background="Peru">
+
+                    <DataGrid Height="200"  Background="Chocolate"  AutoGenerateColumns="False" Loaded="Window_Loaded" Name="data1" Width="200" Canvas.Top="23" >
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="List"  Binding="{Binding Path=Text}">
+
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox  Name="textBox1" Width="120" />
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="data" Width="150" FontSize="16" Loaded="Window_Loaded" AutoGenerateColumns="False" Background="Sienna"  Margin="10,151,0.6,-147">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn CanUserSort="True" Header="List" Binding="{Binding Path=Text}">
+
+                        </DataGridTextColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            
+        
+        
+    </Grid>
+</Window>

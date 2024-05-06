@@ -1,0 +1,28 @@
+﻿<Window x:Class="App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="-10,58,0,220">
+
+
+
+        <Menu Height="75" VerticalAlignment="Top" Margin="10,19,0,0">
+            <MenuItem Header="Stack" Height="75" Width="250" Click="MenuItem_Click">
+                <Button Content="Add" Click="AddToStack" />
+                <Button Content="Delete" Click="DeleteFromStack"/>
+            </MenuItem>
+            <MenuItem Header="Queue" Height="75" Width="250" >
+                <Button Content="Add" />
+                <Button Content="Delete" />
+            </MenuItem>
+            <MenuItem Header="Deck" Height="75" Width="250">
+                <Button Content="Add" />
+                <Button Content="Delete" />
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
